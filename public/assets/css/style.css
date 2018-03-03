@@ -1,0 +1,57 @@
+body{
+	background-color: #f2cc72;
+}
+
+.title{
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 60px; 
+	margin-left: 37%;
+	color: red;
+}
+
+img{
+	width: 25%;
+	margin-left: 35%;
+	margin-top: 3%;
+}
+
+input[type="text"]{
+	width: 35%;
+	height: 90px;
+	margin-left: 31%;
+	border: 2px solid blue;
+}
+
+li{
+	list-style-type: none;
+}
+h3{
+	font-family: 'Shadows Into Light', cursive;
+	color: red;
+}
+
+.content{
+	width: 60%;
+	margin: auto;
+}
+
+.content p{
+	margin-left: 23%;
+}
+
+#make-it{
+	margin-top: 3%;
+	margin-left: 43%;
+}
+
+.not-eaten{
+	float:left;
+	padding-left: 10%;
+	width: 50%;
+}
+
+.eaten{
+	float: left;
+	padding-left: 10%;
+	width: 50%;
+}

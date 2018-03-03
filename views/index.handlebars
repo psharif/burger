@@ -1,0 +1,39 @@
+<div class="container-fluid">
+	<div class="content">
+		<h1 class="title">Burgers</h1>
+		<img src="assets/images/hamburger.png" alt="hamburger">
+		<br><br>
+		<div class="not-eaten">
+			<h3>Not-Eaten</h3>
+			<hr>
+			<ul>
+				{{#each burger}}
+					{{#unless devoured}}
+						<li>
+							{{id}}&nbsp;&nbsp;&nbsp;{{burger_name}}
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Devour It</button>
+						</li>
+						<br>
+					{{/unless}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="eaten">
+			<h3>Eaten</h3>
+			<hr>
+			<ul>
+				{{#each burger}}
+					{{#if eaten}}
+						<li>{{id}}&nbsp;&nbsp;&nbsp;{{burger_name}}</li>
+						<br>
+					{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+		<input type="text">
+		<br>
+		<button type="button" class="btn btn-primary" id="make-it">Make-It</button>
+		<br><br>
+		<p>Enter A Burger You Want To Eat And Click The "Submit" Button.</p>
+	</div>
+</div>
