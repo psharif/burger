@@ -14,8 +14,8 @@ var orm = {
 	},
 	//newBurger example {burger_name: burgerName, devoured: true}
 	insertOne: function(table, newBurger, callback){
-		var query = "INSERT INTO ? SET ?";
-		connection.query(query, [table, newBurger], function(err, result){
+		var query = "INSERT INTO " + table + " SET ?";
+		connection.query(query,  newBurger, function(err, result){
 			if(err){
 				console.log(err);
 			}
@@ -23,9 +23,9 @@ var orm = {
 		});
 	},
 	//array example [{devoured: true},{id: burgerId}]
-	updateOne: function(table, columnArray, callback){ 
-		var query = "UPDATE ? SET ? WHERE ?";
-		connection.query(query, [table, columnArray], function(err, result){
+	updateOne: function(table, updatedBurger, callback){ 
+		var query = "UPDATE " + table + " SET ? WHERE ?";
+		connection.query(query, [{devoured: updatedBurger.devoured}, {id: updatedBurger.id}], function(err, result){
 			if(err){
 				console.log(err);
 			}
